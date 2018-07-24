@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12j-FV-9wj" userLabel="Send message">
-                                <rect key="frame" x="309" y="312" width="50" height="35"/>
+                                <rect key="frame" x="309" y="333" width="50" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="6sh-Z4-8Ah"/>
                                     <constraint firstAttribute="width" constant="50" id="S9e-ia-h0V"/>
@@ -67,7 +67,7 @@
                             <constraint firstItem="kOc-yp-d81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PV0-TF-cA5"/>
                             <constraint firstItem="j4O-Yj-QOO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e71-ds-lUc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="12j-FV-9wj" secondAttribute="trailing" constant="16" id="mVM-C9-Pq2"/>
-                            <constraint firstItem="12j-FV-9wj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="uVP-La-Kor"/>
+                            <constraint firstItem="12j-FV-9wj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="245" id="uVP-La-Kor"/>
                             <constraint firstItem="kOc-yp-d81" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdE-OM-aDB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
