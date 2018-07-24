@@ -1,24 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xJP-1B-fZP">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PROPHET-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AITellingUFortune" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQE-Ji-Av6" userLabel="Massage Field">
+                                <rect key="frame" x="36" y="312" width="255" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="hCJ-xr-uu1"/>
+                                    <constraint firstAttribute="height" constant="30" id="nfd-mm-e16"/>
+                                </constraints>
+                                <color key="textColor" red="0.51330504440000002" green="0.15480251910000001" blue="0.15433322299999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請問有什麼問題" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4O-Yj-QOO" userLabel="Response">
+                                <rect key="frame" x="62.666666666666657" y="132" width="249.99999999999997" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="5Rw-Eh-ehp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="NbP-ty-AFF"/>
+                                    <constraint firstAttribute="height" constant="126" id="dI6-x0-Jpo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12j-FV-9wj" userLabel="Send message">
+                                <rect key="frame" x="309" y="312" width="50" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6sh-Z4-8Ah"/>
+                                    <constraint firstAttribute="width" constant="50" id="S9e-ia-h0V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMassage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLK-u2-bfp"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="kOc-yp-d81">
+                                <rect key="frame" x="0.0" y="333" width="375" height="445"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="j4O-Yj-QOO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="C5h-YT-JQv"/>
+                            <constraint firstItem="tQE-Ji-Av6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Ojd-ii-2RG"/>
+                            <constraint firstItem="kOc-yp-d81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PV0-TF-cA5"/>
+                            <constraint firstItem="j4O-Yj-QOO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e71-ds-lUc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="12j-FV-9wj" secondAttribute="trailing" constant="16" id="mVM-C9-Pq2"/>
+                            <constraint firstItem="kOc-yp-d81" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdE-OM-aDB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="PROPHET" id="DeD-nb-2ba"/>
+                    <connections>
+                        <outlet property="messageField" destination="tQE-Ji-Av6" id="l11-1y-O2G"/>
+                        <outlet property="responseLabel" destination="j4O-Yj-QOO" id="b8E-Q0-bWt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="132.26600985221674"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vmw-eZ-DIt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJP-1B-fZP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e5g-5b-lYl">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="asO-qe-64M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMk-Ne-ekG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="eye" width="330" height="339.75"/>
+    </resources>
 </document>

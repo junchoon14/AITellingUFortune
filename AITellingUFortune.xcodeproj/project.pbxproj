@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF9D969C1A9A3E49D75CF6EA /* Pods_AITellingUFortune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203F8619F9B45C5627B2334B /* Pods_AITellingUFortune.framework */; };
 		BC810280210718AD00C66549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC81027F210718AD00C66549 /* AppDelegate.swift */; };
 		BC810282210718AD00C66549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC810281210718AD00C66549 /* ViewController.swift */; };
 		BC810285210718AD00C66549 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC810283210718AD00C66549 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		203F8619F9B45C5627B2334B /* Pods_AITellingUFortune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AITellingUFortune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44948EC428BFB3FF1F97E0A3 /* Pods-AITellingUFortune.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AITellingUFortune.release.xcconfig"; path = "Pods/Target Support Files/Pods-AITellingUFortune/Pods-AITellingUFortune.release.xcconfig"; sourceTree = "<group>"; };
+		96D026876CB4894C21C34209 /* Pods-AITellingUFortune.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AITellingUFortune.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AITellingUFortune/Pods-AITellingUFortune.debug.xcconfig"; sourceTree = "<group>"; };
 		BC81027C210718AD00C66549 /* AITellingUFortune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITellingUFortune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC81027F210718AD00C66549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC810281210718AD00C66549 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9D969C1A9A3E49D75CF6EA /* Pods_AITellingUFortune.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8467B2AEF7E362767FFFE99A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				203F8619F9B45C5627B2334B /* Pods_AITellingUFortune.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC810273210718AD00C66549 = {
 			isa = PBXGroup;
 			children = (
 				BC81027E210718AD00C66549 /* AITellingUFortune */,
 				BC81027D210718AD00C66549 /* Products */,
+				D61AA897FE58460C20C60C94 /* Pods */,
+				8467B2AEF7E362767FFFE99A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = AITellingUFortune;
 			sourceTree = "<group>";
 		};
+		D61AA897FE58460C20C60C94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96D026876CB4894C21C34209 /* Pods-AITellingUFortune.debug.xcconfig */,
+				44948EC428BFB3FF1F97E0A3 /* Pods-AITellingUFortune.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC81028E210718AF00C66549 /* Build configuration list for PBXNativeTarget "AITellingUFortune" */;
 			buildPhases = (
+				53BB2CBC7C41E408107192BF /* [CP] Check Pods Manifest.lock */,
 				BC810278210718AD00C66549 /* Sources */,
 				BC810279210718AD00C66549 /* Frameworks */,
 				BC81027A210718AD00C66549 /* Resources */,
+				7F9C02E0D805BCE15CD19CAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53BB2CBC7C41E408107192BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AITellingUFortune-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F9C02E0D805BCE15CD19CAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AITellingUFortune/Pods-AITellingUFortune-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AITellingUFortune/Pods-AITellingUFortune-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC810278210718AD00C66549 /* Sources */ = {
@@ -280,6 +345,7 @@
 		};
 		BC81028F210718AF00C66549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96D026876CB4894C21C34209 /* Pods-AITellingUFortune.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +363,7 @@
 		};
 		BC810290210718AF00C66549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44948EC428BFB3FF1F97E0A3 /* Pods-AITellingUFortune.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

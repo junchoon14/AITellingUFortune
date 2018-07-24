@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import ApiAI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let configuration = AIDefaultConfiguration()
+        configuration.clientAccessToken = "23dafd85c5d44b86953f939b20961078"
+        
+        let apiai = ApiAI.shared()
+        apiai?.configuration = configuration
+        
         return true
     }
 
