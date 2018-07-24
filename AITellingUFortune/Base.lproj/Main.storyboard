@@ -52,12 +52,16 @@
                                     <action selector="sendMassage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLK-u2-bfp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="kOc-yp-d81">
-                                <rect key="frame" x="0.0" y="333" width="375" height="445"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="kOc-yp-d81">
+                                <rect key="frame" x="0.0" y="439" width="375" height="339"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="339" id="3bu-zV-Gwl"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="j4O-Yj-QOO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="C5h-YT-JQv"/>
+                            <constraint firstItem="kOc-yp-d81" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oa6-bC-dH1"/>
                             <constraint firstItem="tQE-Ji-Av6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Ojd-ii-2RG"/>
                             <constraint firstItem="kOc-yp-d81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PV0-TF-cA5"/>
                             <constraint firstItem="j4O-Yj-QOO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e71-ds-lUc"/>

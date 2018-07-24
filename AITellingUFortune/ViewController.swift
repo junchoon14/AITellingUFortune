@@ -25,8 +25,10 @@ class ViewController: UIViewController {
         
         request?.setMappedCompletionBlockSuccess({ (request, response) in
             let response = response as! AIResponse
-            if let textResponse = response.result.fulfillment.speech {
-                self.speechAndText(text: textResponse)
+            if let textResponse = response.result.fulfillment.messages {
+                let textRespoArray = textResponse[0] as NSDictionary
+                print(textResponse)
+                self.speechAndText(text: textRespoArray.value(forKey: "speech") as! String)
             }
         }, failure: { (request, error) in
             print(error!)
@@ -48,6 +50,6 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseInOut, animations: {
             self.responseLabel.text = text
         }, completion: nil)
-
+    }
 }
 
